@@ -1,0 +1,16 @@
+This is the deploy script. 
+
+If you want to run the Karel Solver execute the deploy.py script.
+
+usage: deploy.py [-h] -t TASK_PATH [-s]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -t TASK_PATH, --task TASK_PATH
+                        Relative path to the .json file with the Karel task.
+  -s, --short           Enable this if you do not want to pretty print the entire states.
+
+actions.py, cnn.py, direction.py, environment.py, rewards.py, sequence.py are environment 
+inference modules. 
+
+The neural network parameters are stored in model.pth. 

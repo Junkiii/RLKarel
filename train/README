@@ -1,0 +1,38 @@
+This is the Karel Task neural network training framework.
+
+The '/models' folder contains 2 neural network model:
+    >>> mlp.py contains a simple Multilayer Perceptron which I used for debugging and 
+        and early development
+    >>> cnn.py contains the final neural network model. It uses convolutional layers 
+        in the shared part of the network and 2 mlps for the value network and 
+        policy network. 
+
+The actions.py, direction.py, and environment.py modules define the environment of the Karel task:
+    >>> action.py defines the 6 actions the agent can take and some basic functions
+    >>> direction.py is a simple module that takes care of the agent's direction on the 
+        grid. 
+    >>> environment.py is the main environment module that define the state of our 
+        reinforcement learning task. 
+
+The dataset.py, rewards.py, sequences.py, and train.py are the core modules of the training framework:
+    >>> dataset.py defines a custom dataset that i can use with a dataloader for efficiently loading 
+        the training tasks and validation tasks in batches. 
+    >>> rewards.py is a simple module that defines the reward function. 
+    >>> sequences.py defines the Sequence class for our optimal training sequences.
+    >>> train.py is the core training loop and training setup containing the backward pass and 
+        episode enrolling functionality. (Actor-Critic)
+
+The utils.py module contains some basic utility functions.
+
+The logger.py, test.py, validate.py, and visualize.py are used for evalating and documenting training runs.
+    >>> logger.py is used during the training to log different learning values (loss, correctness, time, etc.)
+    >>> test.py evaluates a model using a single task from a data set
+    >>> validate.py evaluates a model on a whole data set (using batches)
+    >>> visualize.py can be used to plot graphs of the logs created with logger.py 
+
+Notice that you may need to configure some hyperparameters and values in the code to use the training and testing
+framework. 
+
+I also included the basic folder structure such that one can also easily execute my python modules and framework. 
+
+Written by Hendrik Junkawitsch, Saarland University
